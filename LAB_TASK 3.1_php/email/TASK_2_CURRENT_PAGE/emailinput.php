@@ -3,8 +3,7 @@
 	
 
 	if(isset($_REQUEST['submit'])){
-
-		$name = $_REQUEST['name'];
+		$name = $_REQUEST['email'];
 		
 		if($name == ""){
 			echo " field required...";
@@ -17,13 +16,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Name</title>
+	<title>Email</title>
 </head>
 <body>
-	<form method="post" action="nameinput.php" >
+	<form method="post" action="emailinput.php" >
 		<fieldset>
-			<legend>Name</legend>
-			<input type="text" name="name" value=" ">
+			<legend>Email</legend>
+			<input type="email" name="email" value=" ">
 			<input type="submit" name="submit" value="Submit">
 		</fieldset>
 	</form>
