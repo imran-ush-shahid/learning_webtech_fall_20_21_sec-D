@@ -14,11 +14,13 @@ if (isset($_POST['submit'])) {
         fclose($file);
         session_start();
         $_SESSION['userId'] = $id;
-        header("Location: index.php?status=success");
-    } else {
+        header("Location: index.php?status= registration success");
+    }
+ else {
         header("Location: registration.php?status=password-didn't-matched");
     }
-} else {
+}
+ else {
     header("Location: registration.php");
 }
 
