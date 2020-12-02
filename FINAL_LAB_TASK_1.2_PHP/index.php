@@ -18,6 +18,28 @@
         <a href="view/registration.php"><input type="button" name="signup" value="Sign Up"></a>
         
     </form>
+<?php
+        
+        if(isset($_REQUEST['msg'])){
+            
+		if($_REQUEST['msg'] == 'null'){
+			echo "Please fill up all information";
+		}
+            
+        if($_REQUEST['msg'] == 'invalid_user'){
+			echo "Invalid Credentials";
+		}
+            
+            if($_REQUEST['msg'] == 'valid'){
+			
+                header('location: view/home.php');
+		}
+
+
+		
+	}
+        
+        ?>
         
     </center>
     
